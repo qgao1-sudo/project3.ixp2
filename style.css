@@ -1,0 +1,132 @@
+body{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:black;
+  font-family:sans-serif;
+}
+
+
+.wrap{
+  position:relative;
+  width:1800px; 
+  max-width: 90vw;
+}
+
+
+.wrap img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+
+.wrap p{
+  position:absolute;
+  top:1%;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgb(0, 0, 0);
+  font-size:36px;
+  font-weight:bold;
+  text-align:center;
+  white-space:nowrap;
+}
+
+
+.wrap .btn{
+  position:absolute;
+  bottom:15%;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:28px;
+  padding:16px 40px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  cursor:pointer;
+}
+
+.wave-btn span{
+  display:inline-block;
+}
+
+.wave-btn:hover span{
+  animation: wave 0.6s ease-in-out infinite;
+}
+
+.wave-btn:hover span:nth-child(1){ animation-delay:0s; }
+.wave-btn:hover span:nth-child(2){ animation-delay:0.05s; }
+.wave-btn:hover span:nth-child(3){ animation-delay:0.1s; }
+.wave-btn:hover span:nth-child(4){ animation-delay:0.15s; }
+.wave-btn:hover span:nth-child(5){ animation-delay:0.2s; }
+.wave-btn:hover span:nth-child(6){ animation-delay:0.25s; }
+.wave-btn:hover span:nth-child(7){ animation-delay:0.3s; }
+.wave-btn:hover span:nth-child(8){ animation-delay:0.35s; }
+.wave-btn:hover span:nth-child(9){ animation-delay:0.4s; }
+
+@keyframes wave{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-6px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+
+body.p2 #nextBtn:hover{
+  color: transparent;
+  position: relative;
+}
+
+body.p2 #nextBtn:hover::after{
+  content: "你确定？";
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relax-btn:hover{
+  animation: breatheBig 2.2s ease-in-out infinite;
+}
+
+@keyframes breatheBig{
+  0%{
+    transform:translateX(-50%) scale(1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  50%{
+    transform:translateX(-50%) scale(1.25);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+  }
+  100%{
+    transform:translateX(-50%) scale(1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+}
+
+body.p3 #fiveBtn:hover{
+  transform:translateX(-50%) scale(1.1);
+}
+
+body.p4 #interactBtn{
+  transition: transform 0.15s ease;
+}
+
+body.p5 #finalBtn:hover{
+  animation: tinyShake 0.22s ease-in-out infinite;
+}
+
+@keyframes tinyShake{
+  0%   { transform: translateX(-50%) translateY(0); }
+  50%  { transform: translateX(-50%) translateY(-2px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
