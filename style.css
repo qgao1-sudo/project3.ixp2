@@ -130,3 +130,21 @@ body.p5 #finalBtn:hover{
   50%  { transform: translateX(-50%) translateY(-2px); }
   100% { transform: translateX(-50%) translateY(0); }
 }
+
+@media (max-width: 768px) {
+
+  
+
+  .wrap p{
+    position: static;
+    transform: none;
+    margin: 0 0 12px 0;
+    text-align: center;
+    white-space: normal;
+
+    color: #fff;         
+    font-size: 18px;     
+    line-height: 1.25;
+  }
+
+}

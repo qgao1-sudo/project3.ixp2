@@ -1,4 +1,4 @@
-// Page 3 button interaction
+
 
 const fiveBtn = document.querySelector("#fiveBtn");
 
@@ -63,6 +63,6 @@ if (finalBtn) {
 
   finalBtn.addEventListener("click", () => {
     alert("Roman：You’re just clicking it now? You’re late!Redo it！😡");
-    window.location.href = "index.html"; // 如果你第一页不是 index.html 就改成你的第一页文件名
+    window.location.href = "index.html"; 
   });
 }
